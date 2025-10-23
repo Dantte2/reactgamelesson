@@ -3,11 +3,14 @@ import './index.css';
 
 
 function Die(props) {
-    return(
-        <button className="die">
-            {props.value}
-        </button>
-    )
+  return (
+    <button
+      className={`die ${props.isHeld ? "held" : ""}`}
+      onClick={props.toggleHold}
+    >
+      {props.value}
+    </button>
+  );
 }
 
 export default Die;
